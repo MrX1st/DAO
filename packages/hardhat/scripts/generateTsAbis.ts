@@ -7,8 +7,8 @@
  */
 
 import * as fs from "fs";
-import prettier from "prettier";
 import { DeployFunction } from "hardhat-deploy/types";
+import prettier from "prettier";
 
 const generatedContractComment = `
 /**
@@ -134,3 +134,4 @@ const generateTsAbis: DeployFunction = async function () {
 };
 
 export default generateTsAbis;
+generateTsAbis.tags = ["generateTsAbis"];
