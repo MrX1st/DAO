@@ -1,2 +1,11 @@
-next-env.d.ts
-.next/
+node_modules
+.next
+.yarn
+dist
+build
+artifacts
+cache
+coverage
+hardhat.cache
+packages/hardhat/artifacts
+packages/hardhat/cache
