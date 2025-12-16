@@ -1,7 +1,7 @@
 "use client";
 
-import { useMemo } from "react";
 import { motion } from "framer-motion";
+import { useMemo } from "react";
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { formatEther, parseEther } from "viem";
 import { useAccount } from "wagmi";
@@ -132,7 +132,7 @@ export default function DAOHomePage() {
   }, [staked, withdrawn, totalStaked]);
 
   // ---------- WRITES (example) ----------
-  const stakeContract = deployedContracts[31337]?.StakeGov;
+  const stakeContract = (deployedContracts as any)[31337]?.StakeGov;
   const { writeContractAsync: stakeTx } = useScaffoldWriteContract({
     contractName: "StakeGov",
   });
