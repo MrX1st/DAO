@@ -145,7 +145,9 @@ contract StakeGov {
     // -------------------------
 
     /// @notice Read full proposal fields
-    function getProposal(uint256 proposalId)
+    function getProposal(
+        uint256 proposalId
+    )
         external
         view
         returns (

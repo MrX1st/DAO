@@ -6,11 +6,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 contract GovToken is ERC20 {
     address public owner;
 
-    constructor(
-        string memory name_,
-        string memory symbol_,
-        uint256 initialSupply
-    ) ERC20(name_, symbol_) {
+    constructor(string memory name_, string memory symbol_, uint256 initialSupply) ERC20(name_, symbol_) {
         owner = msg.sender;
         _mint(msg.sender, initialSupply);
     }

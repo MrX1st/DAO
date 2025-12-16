@@ -77,7 +77,9 @@ function getInheritedFunctions(sources: Record<string, any>, contractName: strin
 
 function getContractDataFromDeployments() {
   if (!fs.existsSync(DEPLOYMENTS_DIR)) {
-    throw Error("At least one other deployment script should exist to generate an actual contract.");
+    console.log("⚠️ No deployments folder found. Skipping ABI generation.");
+    return {};
+    //throw Error("At least one other deployment script should exist to generate an actual contract.");
   }
   const output = {} as Record<string, any>;
   const chainDirectories = getDirectories(DEPLOYMENTS_DIR);
